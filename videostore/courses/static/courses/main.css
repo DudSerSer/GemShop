@@ -1,0 +1,25 @@
+body {
+    background: green;
+}
+
+.courses {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+    margin: 100px 10%;
+}
+
+.courses.courses {
+    width: 80%;
+}
+
+.courses.courses img {
+    width: 100%;
+}
+
+footer {
+    width: 80%;
+    margin-left: 10%;
+}
