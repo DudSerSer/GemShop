@@ -17,3 +17,8 @@ class HomePage(ListView):
 class ShopDetailPage(DetailView):
     model = Course
     template_name = 'courses/gems.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        ctx = super(ShopDetailPage, self).get_context_data(**kwargs)
+        ctx['title'] = Course.objects.filter(slug=self.kwargs['slug']).first
+        return ctx
