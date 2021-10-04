@@ -8,11 +8,11 @@ body {
     flex-wrap: wrap;
     align-items: center;
     width: 80%;
-    margin: 100px 10%;
+    margin: 90px 10%;
 }
 
 .courses.courses {
-    width: 80%;
+    width: 50%;
 }
 
 .main-block{
@@ -21,10 +21,10 @@ body {
 }
 
 
-.one-course {margin-right: 120px}
+.one-course {margin-right: 100px}
 
 .courses.courses img {
-    width: 100%;
+    width: 90%;
 }
 
 footer {
