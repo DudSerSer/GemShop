@@ -2,9 +2,16 @@ from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
 
+TYPE_CHOICES = (
+    ('Полный пакет', 'full'),
+    ('Бесплатный пакет', 'free')
+
+)
+
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     img = models.ImageField(default='default.png', upload_to='user_images')
+    account_type = models.CharField(choices=TYPE_CHOICES, default='Бесплатный пакет', max_length=30)
 
     def __str__(self):
         return f'Профайл пользователя {self.user.username}'
